@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Zen Old Mincho', sans-serif;
+}
+
+body {
+    background: url('/media/pages/contact-bg.jpg') no-repeat top center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.form-container {
+    margin-bottom: 0 20px 40px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width:550px;
+    background: rgba(0,0,0,0.8);
+    padding:30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+   
+}
+
+.form-container .title h2{
+    color: #FFF9EC;
+    text-align:center;
+    margin-bottom: 25px;
+}
+
+.contact-form{
+    display:flex;
+}
+
+.input-fields{
+    display:flex;
+    flex-direction:column;
+    margin-right: 4%;
+}
+
+.input-fields,
+.msg{
+    width:48%;
+}
+
+.input-fields .input, 
+.msg textarea{
+    margin:10px 0;
+    background: transparent;
+    border: 0px;
+    border-bottom: 2px solid #FFF9EC;
+    padding: 12.5px;
+    color: #FFF9EC;
+    width: 100%;
+}
+
+.msg textarea{
+    height: 178px;
+}
+
+::-webkit-input-placeholder {
+    color: #FFF9EC;
+}
+
+::-moz-input-placeholder {
+    color: #FFF9EC;
+}
+
+::-ms-input-placeholder {
+    color: #FFF9EC;
+}
+
+.btn {
+    margin-top: 10px;
+    background: #39b7dd;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    width:100%;
+    border: #fff;
+}
+
+@media screen and (max-width: 600px){
+    .contact-form{
+        flex-direction: column;
+    }
+    .msg textarea{
+        height: 80px;
+    }
+    .input-fields,
+    .msg{
+        width: 100%;
+    }
+} 

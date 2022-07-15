@@ -1,0 +1,314 @@
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+
+:root {
+  --primary: #0d6efd;
+  --dark: #21252f;
+  --body: #888;
+  --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+}
+
+/*table全般の設定*/
+table {border-collapse:collapse;}
+
+/*iframeタグ*/
+iframe {width: 100%;}
+
+body {
+  font-family: 'Sora', sans-serif;
+  line-height: 1.7;
+  color: var(--body);
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-4 {
+  color: var(--dark);
+  font-weight: 500;
+}
+
+a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.logo {
+  width: 120px;
+  height: 35px;
+  margin-bottom: 8px;
+  margin-right: 20px;
+}
+
+.navbar .nav-link {
+  color: #ffffff !important;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.btn {
+  padding: 9px 13px;
+  border-width: 2px;
+  border-radius: 0;
+}
+
+.hero {
+  background-image: url("/static/img/cover.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 2;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(37, 39, 71, 0.275);
+  z-index: -1;
+}
+
+.contact {
+  background-image: url("/static/img/contactform.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 2;
+  height: 500px;
+}
+
+.company {
+  background-image: url("/static/img/company.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 2;
+  height: 500px;
+}
+
+.card-effect {
+  box-shadow: var(--box-shadow);
+  background-color: #fff;
+  padding: 25px;
+  transition: all 0.35s ease;
+}
+
+
+.card-effect:hover {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+.blog-card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.iconbox {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 26px;
+  background-color: var(--primary);
+  border-radius: 100px;
+  flex: none;
+}
+
+.service {
+  position: relative;
+  overflow: hidden;
+}
+
+.service::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background-color: var(--primary);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.35s ease;
+  z-index: -1;
+}
+
+.service:hover h5,
+.service:hover p {
+  color: white;
+}
+
+.service:hover .iconbox {
+  background-color: #fff;
+  color: var(--primary);
+}
+
+.service:hover::after {
+  opacity: 1;
+  top: 0;
+}
+
+.col-img {
+  background-image: url("/static/img/president.jpg");
+  position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 600px;
+}
+
+/* project section */
+.project {
+  position: relative;
+  overflow: hidden;
+}
+
+.project .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(37, 39, 71, 0.275);
+  padding: 30px;
+  display: flex;
+  align-items: flex-end;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.project img {
+  object-fit: cover;
+  transition: all 0.4s ease;
+  width : 100%;
+  height: 300px;
+}
+
+.project:hover .overlay {
+  opacity: 1;
+}
+
+.project:hover img {
+  transform: scale(1.1);
+}
+
+/* team section */
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons a {
+  width: 34px;
+  height: 34px;
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  margin-left: 7px;
+  transition: all 0.4s ease;
+}
+
+.social-icons a:hover {
+  color: var(--primary);
+  background-color: transparent;
+}
+
+/* contact section */
+form .form-control {
+  border: transparent;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.footer-top {
+  background-color: var(--dark);
+  padding: 30px;
+}
+
+.footer-top a {
+  color: var(--body);
+}
+
+.footer-top a:hover {
+  color: #fff;
+}
+
+.complete {
+  color: black;
+  margin-top: 50px;
+  text-align: center;
+}
+
+/* company section */
+.ta1 caption {
+	border-top: 1px solid rgba(61, 59, 59, 0.5);	/*上の枠線の幅、線種、色。255,255,255は白の事で0.5は色が50%出た状態。*/
+	font-weight: bold;								/*太字に*/
+	padding: 10px 5px;								/*上下、左右へのボックス内の余白。基本的に数行下の「.ta1 th, .ta1 td」のpaddingと揃えておけばOKです。*/
+	background: rgba(61, 59, 59, 0.5);	/*背景色*/
+}
+
+/*ta1テーブルブロック設定*/
+.ta1 {
+	border-top: 1px solid rgba(61, 59, 59, 0.5);	/*テーブルの一番上の線。幅、線種、色。255,255,255は白の事で0.5は色が50%出た状態。*/
+	table-layout: fixed;
+	width: calc(100% - 10px);	/*テーブルの両サイドに合計10px（左右各5pxずつ）の余白を作った残りを幅にします*/
+	margin: 0 auto 30px;		/*最後の「30px」がテーブルの下に空けるスペースです*/
+}
+
+/*tr（１行分）タグ設定*/
+.ta1 tr {
+	border-bottom: 1px solid rgba(61, 59, 59, 0.5);	/*テーブルの下線。幅、線種、色。255,255,255は白の事で0.5は色が50%出た状態。*/
+}
+
+/*th（左側）、td（右側）の共通設定*/
+.ta1 th, .ta1 td {
+	padding: 10px 5px;		/*上下、左右へのボックス内の余白*。基本的に数行上の「.ta1 caption」のpaddingと揃えておけばOKです。*/
+	word-break: break-all;	/*英語などのテキストを改行で自動的に折り返す設定。これがないと、テーブルを突き抜けて表示される場合があります。*/
+}
+
+/*th（左側）のみの設定*/
+.ta1 th {
+	width: 30%;				/*幅*/
+	text-align: left;		/*左よせにする*/
+	font-weight: normal;	/*デフォルトの太字を標準にする*/
+}
+
+.features {
+  background-color: rgb(0, 30, 54);
+}
+
+.features p {
+  color: rgb(221, 221, 221);
+}

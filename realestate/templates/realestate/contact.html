@@ -1,0 +1,47 @@
+{% extends "realestate/base.html "%}
+
+{% block header %}{% endblock header %}
+
+{% block footer %}
+
+<div class="contact d-flex align-items-center" id="home">
+  <div class="container">
+    <div class="row">
+      <div class="clo-lg-7 mx-auto text-center">
+        <h1 class="display-4 text-white">Contact</h1>
+        <p class="text-white">
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="contact" class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto text-center">
+        <h2>お問い合わせ</h2>
+      </div>
+    </div>
+
+    <form action="" class="row g-3 justify-content-center mt-2" method="post">
+      {% csrf_token %}
+      <div class="col-md-5">
+        <input type="text" class="form-control" placeholder="氏名" name="name">
+      </div>
+      <div class="col-md-5">
+        <input type="email" class="form-control" placeholder="メールアドレス" name="address">
+      </div>
+      <div class="col-md-10">
+        <input type="text" class="form-control" placeholder="件名" name="title">
+      </div>
+      <div class="col-md-10">
+        <textarea name="message" id="" cols="30" rows="5" class="form-control" placeholder="お問い合わせ内容"></textarea>
+      </div>
+      <div class="col-md-10 d-grid">
+        <button class="btn btn-primary" type="submit">送信</button>
+      </div>
+    </form>
+  </div>
+</section>
+{% endblock footer %}
