@@ -17,7 +17,7 @@
 </div>
 
 <section id="contact" class="">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-8 mx-auto text-center mb-3">
         <h2>物件一覧</h2>
@@ -30,7 +30,7 @@
       
       <div class="row g-4">
         {% for post in post_data %}
-        <div class="col-md-4">
+        <div class="col-lg-4 col-sm-6 col-xs-12">
           <div class="blog-card card-effect">
             {% if post.image %}
                   <img src="{{ post.image.url }}" alt="" class="card-img-top index-img">
@@ -38,7 +38,7 @@
             <h5 class="mb-0 mt-4">
               <a href="#">{{ post.title }}</a>
             </h5>
-            <p>{{ post.content|truncatechars:100 }}</p>
+            <p>{{ post.content|truncatechars:100|linebreaks }}</p>
             <div class="btn btn-warning">詳細</div>
           </div> 
         </div>
