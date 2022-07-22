@@ -41,6 +41,13 @@ section {
   padding-bottom: 120px;
 }
 
+small {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  color: rgb(97, 97, 97);
+}
+
 .logo {
   width: 120px;
   height: 35px;
@@ -264,6 +271,7 @@ form .form-control {
 .footer-top {
   background-color: var(--dark);
   padding: 30px;
+  font-size: 13px;
 }
 
 .footer-top a {

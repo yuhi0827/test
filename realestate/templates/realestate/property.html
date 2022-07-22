@@ -15,20 +15,18 @@
     </div>
   </div>
 </div>
-
-<section id="contact" class="">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-8 mx-auto text-center mb-3">
-        <h2>物件一覧</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. In, quo.
-        </p>
+  <section id="contact" class="">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8 mx-auto text-center mb-3">
+          <h2>物件一覧</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In, quo.
+          </p>
+        </div>
       </div>
-    </div>
 
-      
-      <div class="row g-4">
+       <div class="row g-4">
         {% for post in post_data %}
         <div class="col-lg-4 col-sm-6 col-xs-12">
           <div class="blog-card card-effect">
@@ -43,38 +41,14 @@
           </div> 
         </div>
       {% endfor %}
+      
       </div>
     </div>
   </section>
-</body>
-<!-- <body>
-  <main>
-    <div class="container">
-      <div class="row my-4">
-        <div class="col-md-8">
-          {% for post in post_data %}
-            <div class="card mb-4">
-              {% if post.image %}
-                <img src="{{ post.image.url }}" alt="" class="card-img-top index-img">
-              {% endif %}
-                <div class="card-body">
-                <h2 class="card-title">{{ post.title }}</h2>
-                <p class="card-text">{{ post.content|truncatechars:100 }}</p>
-                <div class="btn btn-warning">詳細</div>
-              </div>
-              <div class="card-footer text-muted">
-                {{ post.created|date }} by {{ post.author }}
-              </div>
-              <a href="{% url 'post_detail' post.id %}" class="stretched-link"></a>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </main>
-</body> -->
 
 
 
-<!-- --------------------------------------------------- -->
 {% endblock footer %}
+
+
+

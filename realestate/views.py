@@ -1,13 +1,8 @@
 from django.shortcuts import render
-# from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.views.generic import View
 from .models import Post
-# from django.contrib.auth.mixins import LoginRequiredMixin
-# from django.urls.base import reverse_lazy
-# from django.views.generic import TemplateView
-# from django.views.generic.edit import FormView
-# from .forms import ContactForm
+from django.shortcuts import render
 
 
 def contact(request):
@@ -22,23 +17,6 @@ def contact(request):
     send_mail(sub , message, from_email, recipient_list)
     return render(request, 'realestate/complete.html')
   return render(request, 'realestate/contact.html')
-
-
-# class contact(LoginRequiredMixin, FormView):
-#     template_name = "realestate/contact.html"
-#     form_class = ContactForm
-#     success_url = reverse_lazy("realestate:pycomplete")
-
-#     def form_valid(self, form):
-#         form.send_email(
-#             username=self.request.user.username, 
-#             email=self.request.user.email
-#         )
-#         return super().form_valid(form)
-
-# class complete(LoginRequiredMixin, TemplateView):
-#     template_name = "realestate/complete.html"
-
 
 
 def index(request):

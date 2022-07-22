@@ -1,8 +1,7 @@
 from distutils.command.upload import upload
-from turtle import up
 from django.db import models
-from django.conf import settings
 from django.utils import timezone
+
 
 class Post(models.Model):
   title = models.CharField("タイトル",max_length=200)
