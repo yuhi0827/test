@@ -4,6 +4,77 @@
 
 {% block footer %}
 
-property
+{% load static %}
 
+<div class="property d-flex align-items-center" id="home">
+  <div class="container">
+    <div class="row">
+      <div class="clo-lg-7 mx-auto text-center">
+        <h1 class="display-4 text-white">Property</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="contact" class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto text-center mb-3">
+        <h2>物件一覧</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. In, quo.
+        </p>
+      </div>
+    </div>
+
+      
+      <div class="row g-4">
+        {% for post in post_data %}
+        <div class="col-md-4">
+          <div class="blog-card card-effect">
+            {% if post.image %}
+                  <img src="{{ post.image.url }}" alt="" class="card-img-top index-img">
+                {% endif %}
+            <h5 class="mb-0 mt-4">
+              <a href="#">{{ post.title }}</a>
+            </h5>
+            <p>{{ post.content|truncatechars:100 }}</p>
+            <div class="btn btn-warning">詳細</div>
+          </div> 
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+  </section>
+</body>
+<!-- <body>
+  <main>
+    <div class="container">
+      <div class="row my-4">
+        <div class="col-md-8">
+          {% for post in post_data %}
+            <div class="card mb-4">
+              {% if post.image %}
+                <img src="{{ post.image.url }}" alt="" class="card-img-top index-img">
+              {% endif %}
+                <div class="card-body">
+                <h2 class="card-title">{{ post.title }}</h2>
+                <p class="card-text">{{ post.content|truncatechars:100 }}</p>
+                <div class="btn btn-warning">詳細</div>
+              </div>
+              <div class="card-footer text-muted">
+                {{ post.created|date }} by {{ post.author }}
+              </div>
+              <a href="{% url 'post_detail' post.id %}" class="stretched-link"></a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </main>
+</body> -->
+
+
+
+<!-- --------------------------------------------------- -->
 {% endblock footer %}

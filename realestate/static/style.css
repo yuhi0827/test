@@ -104,6 +104,16 @@ section {
   height: 500px;
 }
 
+.property {
+  background-image: url("/static/img/property.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 2;
+  height: 500px;
+}
+
 .card-effect {
   box-shadow: var(--box-shadow);
   background-color: #fff;
@@ -314,3 +324,5 @@ form .form-control {
 .features p {
   color: rgb(221, 221, 221);
 }
+
+/* ----------------------------------- */
